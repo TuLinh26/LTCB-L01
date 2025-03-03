@@ -5,11 +5,11 @@
 int main() {
     float a,b,c;
     float D,x1,x2;
-    printf("nhập a: ");
+    printf("Nhap so a: ");
     scanf("%f",&a);
-    printf("nhập b: ");
+    printf("Nhap so b: ");
     scanf("%f",&b);
-    printf("nhập c: ");
+    printf("Nhap so c: ");
     scanf("%f",&c);
     if (a==0) {
         if (b==0) {
