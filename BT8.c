@@ -17,7 +17,7 @@ int main(){
         else if (a*a+b*b==c*c||a*a+c*c==b*b||b*b+c*c==a*a)
         printf("Tam giác vuong\n");
         else printf("Tam giác thuong\n");
-        printf("C = %f, S = %f\n",P,S);
+        printf("C = %.2f, S = %.2f\n",P,S);
     }
     return 0;
 }

@@ -3,7 +3,7 @@ int main(){
     float a,b,c,d,e,f;
     float D,Dx,Dy,x,y;
     printf("Nhap lan luot cac so a,b,c,d,e,f:");
-    scanf("%f %f %f %f %f %f ",&a,&b,&c,&d,&e,&f);
+    scanf("%f %f %f %f %f %f",&a,&b,&c,&d,&e,&f);
     D=a*e-b*d;
     if (D==0){
         Dx = c*e-b*f;
