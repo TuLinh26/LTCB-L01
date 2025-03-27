@@ -21,9 +21,7 @@ int max = -1e9,vtmax;
             vtmax = i + 1;
         }
     }
-    printf ("max, min:%d\n %d\n",max,min);
-    printf ("vtmax: %d",vtmax);
+    printf ("max %d\n min %d\n",max,min);
+    printf ("vtmax: %d\n",vtmax);
     printf ("vtmin: %d",vtmin);
-    }
 }
-
