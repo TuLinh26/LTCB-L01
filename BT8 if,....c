@@ -15,8 +15,8 @@ int main(){
         else if (a==b||b==c||a==c)
         printf("Tam giac can\n");
         else if (a*a+b*b==c*c||a*a+c*c==b*b||b*b+c*c==a*a)
-        printf("Tam gi·c vuong\n");
-        else printf("Tam gi·c thuong\n");
+        printf("Tam gi√°c vuong\n");
+        else printf("Tam gi√°c thuong\n");
         printf("C = %.2f, S = %.2f\n",P,S);
     }
     return 0;
