@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    double t;
+    printf ("Nhap so tien gui: ");
+    scanf ("%lf", &t);
+    int n;
+    printf ("Nhap so thang gui: ");
+    scanf ("%d", &n);
+    while (n > 0){
+        t += (t * (0.45/100));
+        n--;
+    }
+    printf ("So tien rut duoc: %lf",t);
+}
