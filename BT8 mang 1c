@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <math.h>
+int comp (const void *a, const void *b){
+    int *x = (int *)a;
+    int *y = (int *)b;
+    return *x - *y;
+}
+int c[100000001];
+int main(){
+    int n;
+    printf ("Nhap so phan tu mang 1: ");
+    scanf ("%d", &n);
+    int a[n];
+    printf ("Nhap mang 1: ");
+    for (int i = 0; i < n; i++){
+        scanf ("%d", &a[i]);
+    }
+    int m;
+    printf ("Nhap so phan tu mang 2: ");
+    scanf ("%d", &m);
+    int b[m];
+    printf ("Nhap mang 2: ");
+    for (int i = 0; i < m; i++){
+        scanf ("%d", &b[i]);
+    }
+    qsort (a, n, sizeof(int), comp);
+    qsort (b, m, sizeof(int), comp);
+    int i = 0, j = 0, dem = 0;
+    while (i < n && j < m){
+        if (a[i] < b[j]){
+            c[dem++] = a[i++];
+        }
+        else c[dem++] = b[j++];
+    }
+    while (i < n){
+        c[dem++] = a[i++];
+    }
+    while (j < m){
+        c[dem++] = b[j++];
+    }
+    for (int i = 0; i < dem; i++){
+        printf ("%d ",c[i]);
+    }
+}
