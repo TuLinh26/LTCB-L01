@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<math.h>
+#include<ctype.h>
+#include<string.h>
+#include<stdlib.h>
+struct node{
+	char ten[10];
+	char soluong[20],dongia[20];
+};
+typedef struct node node;
+int com(const void *c,const void *b){
+	node *x=(node *)c;
+	node *y=(node *)b;
+	return strcmp(x->ten,y->ten);
+}
+int main(){
+	node a[1000];
+	printf("nhap so mat hang: ");
+	int n;
+	scanf("%d",&n);
+	int i=n;
+	getchar();
+	for(int j=0;j<i;j++){
+		printf("nhap ten hang: ");
+		gets(a[j].ten);
+		printf("nhap so luong: ");
+		gets(a[j].soluong);
+		printf("nhap don gia:  ");
+		gets(a[j].dongia);
+	}
+	qsort(a,i,sizeof(node),com);
+	printf("              SO LIEU BAN HANG              \n");
+	printf("STT   Ten Hang   So Luong   Don Gia   Thanh Tien\n");
+	int tong=0;
+	for(int j=0;j<i;j++){
+		printf("%d     ",j+1);
+		printf("%s",a[j].ten);
+		for(int k=11;k>=strlen(a[j].ten);k--){
+			printf(" ");
+		}
+		printf("%s",a[j].soluong);
+		for(int k=11;k>=strlen(a[k].soluong);k--){
+			printf(" ");
+		}
+		printf("%s",a[j].dongia);
+		for(int k=10;k>=strlen(a[k].dongia);k--){
+			printf(" ");
+		}
+		printf("%d\n",atoi(a[j].soluong)*atoi(a[j].dongia));	
+		tong+=atoi(a[j].soluong)*atoi(a[j].dongia);
+	}
+	for(int j=1;j<=28;j++){
+		printf(" ");
+	}
+	printf("Tong Tien:  ");
+	printf("%d",tong);
+	return 0;
+}
